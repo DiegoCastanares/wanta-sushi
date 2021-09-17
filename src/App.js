@@ -1,22 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Wanta Sushi</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ItemListContainer
+        texto="Ya podes agregar tus rolls al pedido"
+        numero="5"
+      />
+    </>
   );
 }
 

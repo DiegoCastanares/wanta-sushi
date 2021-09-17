@@ -1,5 +1,5 @@
-
 import LogoWanta from "./LogoWanta.png";
+import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
@@ -42,6 +42,10 @@ function NavBar() {
               <a class="nav-link" href="#">
                 Hacé tu Pedido
               </a>
+            </li>
+
+            <li class="nav-item">
+              <CartWidget />
             </li>
           </ul>
         </div>

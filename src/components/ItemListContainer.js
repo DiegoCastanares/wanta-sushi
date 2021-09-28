@@ -8,9 +8,7 @@ const ItemListContainer = (props) => {
     </div>
   ) : (
     <div className="row">
-      <h2 className="col-md-6 offset-md-3">
-        Tiene en su carrito un total de {numero} rolls para disfrutar
-      </h2>
+      <h2 className="col-md-6 offset-md-3">Greeting</h2>
     </div>
   );
 };

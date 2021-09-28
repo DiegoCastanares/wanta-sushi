@@ -1,13 +1,12 @@
 import "./App.css";
 import ItemListContainer from "./components/ItemListContainer";
+import Item from "./components/Item";
 
 function App() {
   return (
     <>
-      <ItemListContainer
-        texto="Ya podes agregar tus rolls al pedido"
-        numero="5"
-      />
+      <Item />
+      <ItemListContainer texto="Ya podes agregar tus rolls al pedido" />
     </>
   );
 }

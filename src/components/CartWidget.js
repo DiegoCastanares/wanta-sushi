@@ -1,7 +1,7 @@
-import cart from "./cart.svg";
+import { FiShoppingCart } from "react-icons/fi";
 
 function CartWidget() {
-  return <img src={cart} alt="" width="40" height="40" />;
+  return <FiShoppingCart size={25} />;
 }
 
 export default CartWidget;

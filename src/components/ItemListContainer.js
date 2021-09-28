@@ -7,8 +7,8 @@ const ItemListContainer = (props) => {
       <h2 className="col-md-6 offset-md-3">{texto}</h2>
     </div>
   ) : (
-    <div className="row">
-      <h2 className="col-md-6 offset-md-3">Greeting</h2>
+    <div className="d-flex justify-content-center">
+      <h2 className="col-md-6 offset-md-3">{texto} </h2>
     </div>
   );
 };

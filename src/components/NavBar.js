@@ -44,7 +44,7 @@ function NavBar() {
               </a>
             </li>
 
-            <li className="nav-item">
+            <li className="nav-item mt-2 mx-4">
               <CartWidget />
             </li>
           </ul>

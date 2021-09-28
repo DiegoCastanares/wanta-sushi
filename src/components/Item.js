@@ -15,8 +15,9 @@ const Item = () => {
           <div className="mt-2 px-2">
             {" "}
             <small>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+              convallis purus ligula, sed elementum massa pellentesque sed.
+              Vivamus quis tempor quam. Integer nec dignissim tellus.
             </small>{" "}
           </div>
           <div className="px-2 mt-3">

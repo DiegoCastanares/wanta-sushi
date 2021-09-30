@@ -1,22 +1,12 @@
 import React, { useState } from "react";
 
-const ItemCount = (props) => {
+const ItemCount = ({ stock, initial }) => {
   const [contador, setContador] = useState(1);
-  const { stock, initial } = props;
 
-  const sumar = () => {
-    if (contador < stock) {
-      setContador(contador + 1);
-    }
-  };
-
+  const sumar = () => (contador < stock ? setContador(contador + 1) : "");
   console.log(contador);
 
-  const restar = () => {
-    if (contador > initial) {
-      setContador(contador - 1);
-    }
-  };
+  const restar = () => (contador > initial ? setContador(contador - 1) : "");
 
   return (
     <div className="row">
@@ -26,6 +16,7 @@ const ItemCount = (props) => {
       <span className="col-8 fs-4 d-flex justify-content-center">
         {contador}
       </span>
+
       <button className="btn btn-primary col-2" onClick={restar}>
         -
       </button>

@@ -1,41 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Item from "./Item";
 
-const ItemList = () => {
-  const [productList, setproductList] = useState(0);
-
-  const products = [
-    {
-      id: 1,
-      title: "Nigiri",
-      price: 500,
-      pictureUrl: "",
-    },
-    { id: 2, title: "Maki", price: 500, pictureUrl: "" },
-    { id: 3, title: "Uramaki", price: 500, pictureUrl: "" },
-    { id: 4, title: "Temaki", price: 500, pictureUrl: "" },
-    { id: 5, title: "Oshi", price: 500, pictureUrl: "" },
-    { id: 6, title: "Inari", price: 500, pictureUrl: "" },
-  ];
-
-  const ackData = new Promise((resolve, reject) => {
-    setTimeout(function () {
-      resolve(products);
-    }, 2000);
-  });
-
-  ackData.then((response) => {
-    setproductList(
-      response.map((item, index) => <Item props={item} key={index} />)
-    );
-  });
-
-  useEffect(() => {}, []);
-
+const ItemList = ({ productos }) => {
   return (
-    <>
-      <div>{productList}</div>
-    </>
+    <div className="d-flex flex-wrap">
+      {productos.length !== 0 ? (
+        productos.map((producto) => (
+          <Item product={producto} key={producto.id} />
+        ))
+      ) : (
+        <h2>Cargando...</h2>
+      )}
+    </div>
   );
 };
 

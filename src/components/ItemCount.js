@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const ItemCount = ({ stock, initial }) => {
-  const [contador, setContador] = useState(1);
+  const [contador, setContador] = useState(initial);
 
   const sumar = () => (contador < stock ? setContador(contador + 1) : "");
   console.log(contador);
@@ -9,7 +9,7 @@ const ItemCount = ({ stock, initial }) => {
   const restar = () => (contador > initial ? setContador(contador - 1) : "");
 
   return (
-    <div className="row">
+    <div className="row mx-1">
       <button className="btn btn-outline-primary col-2" onClick={sumar}>
         +
       </button>

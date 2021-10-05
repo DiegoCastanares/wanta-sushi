@@ -1,8 +1,8 @@
 // import "./styles.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-// import ItemListContainer from "./components/ItemList/ItemListContainer";
-import ItemListContainer from "./components/ItemListContainer";
-// import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
+import ItemListContainer from "./components/ItemList/ItemListContainer";
+// import ItemListContainer from "./components/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 import NavBar from "./components/NavBar";
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
           <ItemListContainer />
         </Route>
         <Route exact path="/item/:id">
-          {/* <ItemDetailContainer /> */}
+          <ItemDetailContainer />
         </Route>
       </Switch>
     </Router>

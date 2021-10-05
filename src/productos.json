@@ -1,41 +1,49 @@
 [
   {
     "id": 1,
-    "nombre": "Producto uno",
-    "precio": 1600,
-    "imagen": "https://via.placeholder.com/150",
+    "nombre": "Salmon Grille",
+    "precio": 340,
+    "imagen": "../imagenes/atun.png",
     "stock": 10,
     "categoria": "1"
   },
   {
     "id": 2,
-    "nombre": "Producto Dos",
-    "precio": 1600,
-    "imagen": "https://via.placeholder.com/150",
-    "stock": 10,
+    "nombre": "Philadelphia",
+    "precio": 340,
+    "imagen": "../imagenes/kanikama.png",
+    "stock": 15,
     "categoria": "1"
   },
   {
     "id": 3,
-    "nombre": "Producto Tres",
-    "precio": 200,
-    "imagen": "https://via.placeholder.com/150",
-    "stock": 10,
+    "nombre": "Atun",
+    "precio": 340,
+    "imagen": "../imagenes/langostinoMango.png",
+    "stock": 20,
     "categoria": "1"
   },
   {
     "id": 4,
-    "nombre": "Producto Cuatro",
-    "precio": 500,
-    "imagen": "https://via.placeholder.com/150",
-    "stock": 10,
+    "nombre": "Surimi",
+    "precio": 340,
+    "imagen": "../imagenes/langostinos.png",
+    "stock": 25,
     "categoria": "2"
   },
   {
     "id": 5,
-    "nombre": "Producto Cinco",
-    "precio": 1600,
-    "imagen": "https://via.placeholder.com/150",
+    "nombre": "Langostinos",
+    "precio": 340,
+    "imagen": "../imagenes/philadelphia.png",
+    "stock": 30,
+    "categoria": "2"
+  },
+  {
+    "id": 6,
+    "nombre": "Salmon Ahumado",
+    "precio": 340,
+    "imagen": "../imagenes/salmonAhumado.png",
     "stock": 10,
     "categoria": "2"
   }

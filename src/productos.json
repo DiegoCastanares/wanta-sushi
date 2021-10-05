@@ -3,48 +3,54 @@
     "id": 1,
     "nombre": "Salmon Grille",
     "precio": 340,
-    "imagen": "../imagenes/atun.png",
+    "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451361/wantaSushi/salmonAhumado_flws5h.png",
     "stock": 10,
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
     "categoria": "1"
   },
   {
     "id": 2,
     "nombre": "Philadelphia",
     "precio": 340,
-    "imagen": "../imagenes/kanikama.png",
+    "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451361/wantaSushi/philadelphia_gcvxej.png",
     "stock": 15,
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
     "categoria": "1"
   },
   {
     "id": 3,
     "nombre": "Atun",
     "precio": 340,
-    "imagen": "../imagenes/langostinoMango.png",
+    "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451360/wantaSushi/langostinos_kuny0q.png",
     "stock": 20,
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
     "categoria": "1"
   },
   {
     "id": 4,
     "nombre": "Surimi",
     "precio": 340,
-    "imagen": "../imagenes/langostinos.png",
+    "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451359/wantaSushi/langostinoMango_yhn6ka.png",
     "stock": 25,
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
     "categoria": "2"
   },
   {
     "id": 5,
     "nombre": "Langostinos",
     "precio": 340,
-    "imagen": "../imagenes/philadelphia.png",
+    "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451357/wantaSushi/kanikama_c5zqwt.png",
     "stock": 30,
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
     "categoria": "2"
   },
   {
     "id": 6,
     "nombre": "Salmon Ahumado",
     "precio": 340,
-    "imagen": "../imagenes/salmonAhumado.png",
+    "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451356/wantaSushi/atun_yuieay.png",
     "stock": 10,
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
     "categoria": "2"
   }
 ]

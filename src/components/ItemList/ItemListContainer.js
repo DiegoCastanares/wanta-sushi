@@ -21,7 +21,7 @@ function ItemListContainer() {
         }
 
         reject("error al traer productos");
-      }, 3000);
+      }, 2000);
     });
   };
 

@@ -9,7 +9,7 @@ const ItemCount = ({ stock, initial }) => {
   const restar = () => (contador > initial ? setContador(contador - 1) : "");
 
   return (
-    <div className="row mx-1">
+    <div className="row mx-0">
       <button className="btn btn-outline-primary col-2" onClick={sumar}>
         +
       </button>

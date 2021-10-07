@@ -6,7 +6,7 @@
     "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451361/wantaSushi/salmonAhumado_flws5h.png",
     "stock": 10,
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
-    "categoria": "1"
+    "categoria": "mas_vendidos"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451361/wantaSushi/philadelphia_gcvxej.png",
     "stock": 15,
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
-    "categoria": "1"
+    "categoria": "roll semanal"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451360/wantaSushi/langostinos_kuny0q.png",
     "stock": 20,
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
-    "categoria": "1"
+    "categoria": "tempurizados"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451359/wantaSushi/langostinoMango_yhn6ka.png",
     "stock": 25,
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
-    "categoria": "2"
+    "categoria": "mas_vendidos"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451357/wantaSushi/kanikama_c5zqwt.png",
     "stock": 30,
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
-    "categoria": "2"
+    "categoria": "roll semanal"
   },
   {
     "id": 6,
@@ -51,6 +51,6 @@
     "imagen": "https://res.cloudinary.com/dgcnv5j5c/image/upload/v1633451356/wantaSushi/atun_yuieay.png",
     "stock": 10,
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet imperdiet risus, id efficitur metus. Nullam rutrum, mi nec.",
-    "categoria": "2"
+    "categoria": "tempurizados"
   }
 ]

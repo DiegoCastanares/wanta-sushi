@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import misProductos from "../../productos.json";
+import NavBar from "../NavBar";
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);
   const { id: idCategory } = useParams();
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getItems = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {

@@ -1,26 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import LogoWanta from "./LogoWanta.png";
 import CartWidget from "./CartWidget";
-import { Link, NavLink } from "react-router-dom";
-// import product from "../productos.json";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
 function NavBar() {
-  const [prod, setProd] = useState([]);
-
-  const obtenerProd = async () => {
-    const res = await axios.get(
-      "https://api.jsonbin.io/b/615e51799548541c29bf4661/1"
-    );
-    const products = await res.data;
-    setProd(products);
-  };
-
-  useEffect(() => {
-    obtenerProd();
-  }, []);
-
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -43,24 +27,18 @@ function NavBar() {
           id="navbarNav"
         >
           <ul className="navbar-nav">
-            <li>
+            <li className="nav-item mt-1 mx-4">
               <Link to="/">Home</Link>
             </li>
-
-            {prod.map((item) => (
-              <li>
-                <NavLink
-                  to={`/category/${item.categoria}`}
-                  key={item.idCategoria}
-                  activeClassName="currentCategory"
-                  className="nav-item mx-2"
-                >
-                  {" "}
-                  {item.categoria}
-                </NavLink>
-              </li>
-            ))}
-
+            <li className="nav-item mt-1 mx-4">
+              <Link to="/category/mas_vendidos">Mas Vendidos</Link>
+            </li>
+            <li className="nav-item mt-1 mx-4">
+              <Link to="/category/roll%20semanal">Roll Semanal</Link>
+            </li>
+            <li className="nav-item mt-1 mx-4">
+              <Link to="/category/tempurizados">Tempurizados</Link>
+            </li>
             <li className="nav-item mt-1 mx-4">
               <CartWidget itemsCart="4" />
             </li>

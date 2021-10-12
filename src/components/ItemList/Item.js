@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount";
+import AddToCart from "../Cart/AddToCart";
 
 function Item({ product }) {
   return (
@@ -10,6 +11,7 @@ function Item({ product }) {
         <h5 className="card-title"> {product.nombre} </h5>
         <p className="card-text"> {product.precio} </p>
         <ItemCount stock={product.stock} initial={1} />
+        <AddToCart />
         <Link
           to={`/item/${product.id}`}
           className="btn btn-secondary mt-3 col-12"

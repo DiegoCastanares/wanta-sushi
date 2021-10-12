@@ -20,7 +20,6 @@ const ItemCount = ({ stock, initial }) => {
       <button className="btn btn-primary col-2" onClick={restar}>
         -
       </button>
-      <button className="btn btn-primary px-3 mt-3">Agregar al Carrito</button>
     </div>
   );
 };

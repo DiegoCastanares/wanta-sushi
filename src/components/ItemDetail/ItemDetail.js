@@ -1,6 +1,7 @@
 import React from "react";
 import ItemCount from "../ItemCount";
 import { Link } from "react-router-dom";
+import AddToCart from "../Cart/AddToCart";
 
 const ItemDetail = ({ producto }) => {
   return (
@@ -17,6 +18,7 @@ const ItemDetail = ({ producto }) => {
           <h5 className="card-text"> {producto.precio} </h5>
           <p className="card-text">{producto.descripcion}</p>
           <ItemCount stock={producto.stock} initial={1} />
+          <AddToCart />
           <Link to="/">
             <button className="btn btn-secondary col-12 px-4 mt-3">
               Cerrar

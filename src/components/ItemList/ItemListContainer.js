@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import misProductos from "../../productos.json";
-import NavBar from "../NavBar";
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);

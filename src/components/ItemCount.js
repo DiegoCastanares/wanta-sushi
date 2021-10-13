@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock, initial }) => {
   const [contador, setContador] = useState(initial);
@@ -9,10 +10,9 @@ const ItemCount = ({ stock, initial }) => {
 
   const restar = () => (contador > initial ? setContador(contador - 1) : "");
 
-  const onAdd = (ev, input) => {
+  const onAdd = (ev) => {
     ev.preventDefault();
     setState();
-    console.log("se agrega al carrito");
   };
 
   return state ? (
@@ -32,13 +32,14 @@ const ItemCount = ({ stock, initial }) => {
       </button>
     </div>
   ) : (
-    <div className="row">
-      <div className="col-12">
-        <a className="btn btn-success form-control" href="../cart">
-          Ir al carrito
-        </a>
-      </div>
-    </div>
+    <Link to="../Cart">
+      <button
+        className="btn btn-warning col-12 mt-3"
+        style={{ backgroundColor: "#DDFEE1", borderColor: "#DDFEE1" }}
+      >
+        Ir al carrito
+      </button>
+    </Link>
   );
 };
 

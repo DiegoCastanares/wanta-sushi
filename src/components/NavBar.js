@@ -28,16 +28,36 @@ function NavBar() {
         >
           <ul className="navbar-nav">
             <li className="nav-item mt-1 mx-4">
-              <Link to="/">Home</Link>
+              <Link
+                to="/"
+                className="text-decoration-none text-warning fw-bold"
+              >
+                Home
+              </Link>
             </li>
             <li className="nav-item mt-1 mx-4">
-              <Link to="/category/mas_vendidos">Mas Vendidos</Link>
+              <Link
+                to="/category/mas_vendidos"
+                className="text-decoration-none  text-warning fw-bold"
+              >
+                Mas Vendidos
+              </Link>
             </li>
             <li className="nav-item mt-1 mx-4">
-              <Link to="/category/roll%20semanal">Roll Semanal</Link>
+              <Link
+                to="/category/roll%20semanal"
+                className="text-decoration-none  text-warning fw-bold"
+              >
+                Roll Semanal
+              </Link>
             </li>
             <li className="nav-item mt-1 mx-4">
-              <Link to="/category/tempurizados">Tempurizados</Link>
+              <Link
+                to="/category/tempurizados"
+                className="text-decoration-none  text-warning fw-bold"
+              >
+                Tempurizados
+              </Link>
             </li>
             <li className="nav-item mt-1 mx-4">
               <CartWidget itemsCart="4" />

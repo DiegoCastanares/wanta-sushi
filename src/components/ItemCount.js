@@ -10,7 +10,8 @@ const ItemCount = ({ stock, initial, onAdd, addOn }) => {
 
   const restar = () => (contador > initial ? setContador(contador - 1) : "");
 
-  addOn = (ev) => {
+  addOn = () => {
+    onAdd(contador);
     setState();
   };
 
@@ -26,10 +27,7 @@ const ItemCount = ({ stock, initial, onAdd, addOn }) => {
       <button className="btn btn-primary col-2" onClick={restar}>
         -
       </button>
-      <button
-        className="btn btn-primary col-12 mt-3"
-        onClick={() => onAdd(contador)}
-      >
+      <button className="btn btn-primary col-12 mt-3" onClick={() => addOn()}>
         Agregar al Carrito
       </button>
     </div>

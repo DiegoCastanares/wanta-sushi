@@ -2,8 +2,7 @@ import React from "react";
 import { CartContextUse } from "../../context/CartContext";
 
 const Cart = () => {
-  const { clear, cart, removeItem, totalArticle, totalCompra } =
-    CartContextUse();
+  const { clear, cart, removeItem, totalArticle } = CartContextUse();
   console.log(cart);
 
   return cart.length === 0 ? (

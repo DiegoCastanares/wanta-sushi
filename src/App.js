@@ -12,6 +12,7 @@ export default function App() {
     <CartContextProvider>
       <Router>
         <NavBar />
+
         <Switch>
           <Route exact path="/">
             <ItemListContainer />

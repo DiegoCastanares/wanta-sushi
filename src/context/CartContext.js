@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import ItemList from "../components/ItemList/ItemList";
 
 const CartContext = createContext();
 

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { CartContextUse } from "../../context/CartContext";
 
 const Cart = () => {
   const { clear, cart, removeItem, totalArticle, totalPrice } =
     CartContextUse();
   console.log(cart);
+  console.log(cart.length);
 
   return cart.length === 0 ? (
     <div className="container">

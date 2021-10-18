@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import ItemList from "../components/ItemList/ItemList";
 
 const CartContext = createContext();
 
@@ -33,18 +34,32 @@ export const CartContextProvider = ({ children }) => {
     setCart(cartFilter);
   };
 
-  const totalArticle = (a, b) => {
-    return a * b;
+  const totalArticle = (priceArt, cantArt) => {
+    return priceArt * cantArt;
   };
 
-  //   const totalCompra = (c) => {
-  //     return (c += c);
-  //   };
+  const cartProducts = cart.reduce(
+    (acc, product) => (acc += product.quantity),
+    0
+  );
+
+  const totalPrice = cart.reduce(
+    (acc, { quantity, item }) => acc + quantity * item.precio,
+    0
+  );
 
   console.log("carrito", cart);
   return (
     <CartContext.Provider
-      value={{ cart, addItem, clear, removeItem, totalArticle }}
+      value={{
+        cart,
+        addItem,
+        clear,
+        removeItem,
+        totalArticle,
+        totalPrice,
+        cartProducts,
+      }}
     >
       {children}
     </CartContext.Provider>

@@ -3,7 +3,7 @@ import Item from "./Item";
 
 const ItemList = ({ productos }) => {
   return (
-    <div className="d-flex flex-wrap">
+    <div className="d-flex flex-wrap justify-content-center">
       {productos.length !== 0 ? (
         productos.map((producto) => (
           <Item product={producto} key={producto.id} />

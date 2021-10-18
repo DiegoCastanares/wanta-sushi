@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import misProductos from "../../productos.json";
+// import Carousel from "../Carousel ";
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);
@@ -31,7 +32,13 @@ function ItemListContainer() {
       .catch((acaHayError) => console.log(acaHayError));
   }, [idCategory]);
 
-  return <ItemList productos={productos} />;
+  return (
+    <>
+      {/* <Carousel /> */}
+      <h2 className="text-center my-5">Nuestro Menu</h2>
+      <ItemList productos={productos} />;
+    </>
+  );
 }
 
 export default ItemListContainer;

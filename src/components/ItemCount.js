@@ -37,7 +37,7 @@ const ItemCount = ({ stock, initial, onAdd, addOn }) => {
         className="btn btn-warning col-12 mt-3"
         style={{ backgroundColor: "#DDFEE1", borderColor: "#DDFEE1" }}
       >
-        Ir al carrito
+        Terminar Compra
       </button>
     </Link>
   );

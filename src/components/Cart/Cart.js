@@ -1,14 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { CartContextUse } from "../../context/CartContext";
 
 const Cart = () => {
-  const { clear, cart, removeItem, totalArticle } = CartContextUse();
+  const { clear, cart, removeItem, totalArticle, totalPrice } =
+    CartContextUse();
   console.log(cart);
 
   return cart.length === 0 ? (
-    <>
-      <h1>Carrito Malvado</h1>
-    </>
+    <div className="container">
+      <div className="row">
+        <h1 className="col text-center">Tu carro de compras esta vacío</h1>
+      </div>
+      <div className="row">
+        <Link
+          to="/"
+          className="btn btn-secondary mt-3 col-3 col-md-6 offset-md-3"
+        >
+          Ir a comprar
+        </Link>
+      </div>
+    </div>
   ) : (
     <>
       <table className="table">
@@ -31,7 +44,7 @@ const Cart = () => {
             </th>
             <th scope="col" className="col-2 align-middle text-center">
               <button onClick={clear} className="btn btn-danger">
-                Eliminar Compras
+                Eliminar Compra
               </button>
             </th>
           </tr>
@@ -71,6 +84,23 @@ const Cart = () => {
           </>
         );
       })}
+
+      <table className="table">
+        <thead className="col-12">
+          <tr>
+            <th scope="col" className="col-2 align-middle text-center"></th>
+            <th scope="col" className="col-2 align-middle text-center"></th>
+            <th scope="col" className="col-2 align-middle text-center"></th>
+            <th scope="col" className="col-2 align-middle text-center"></th>
+            <th scope="col" className="col-2 align-middle text-center">
+              Total Compra
+            </th>
+            <th scope="col" className="col-2 align-middle text-center">
+              <h3>{totalPrice}</h3>
+            </th>
+          </tr>
+        </thead>
+      </table>
     </>
   );
 };

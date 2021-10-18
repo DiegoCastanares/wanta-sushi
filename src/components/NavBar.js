@@ -1,12 +1,12 @@
 import React from "react";
 
 import LogoWanta from "./LogoWanta.png";
-import CartWidget from "./CartWidget";
+import CartWidget from "./Cart/CartWidget";
 import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container-fluid">
         <Link to="/">
           <img src={LogoWanta} alt="" width="100" height="100" />

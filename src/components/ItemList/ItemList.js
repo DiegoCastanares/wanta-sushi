@@ -9,7 +9,11 @@ const ItemList = ({ productos }) => {
           <Item product={producto} key={producto.id} />
         ))
       ) : (
-        <h2>Cargando...</h2>
+        <div className="text-center">
+          <div className="spinner-border text-warning" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -1,78 +1,35 @@
 import React, { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-// import misProductos from "../../productos.json";
-
+import { useParams } from "react-router-dom";
 import { getFirestore } from "../../firebase";
-const ItemListContainer = () => {
-  const [loading, setLoading] = useState(false);
-  const [productos, setProductos] = useState([]);
+
+function ItemListContainer() {
+  const [product, setProduct] = useState([]);
+  const { categoria: productCategoria } = useParams();
 
   useEffect(() => {
-    setLoading(true);
-    //inicializar la conexion con firebase u conectarme
-    //a firestore
-    const db = getFirestore();
-    //Vamos a ir a la coleccion que yo quiero
-    const itemCollection = db.collection("productos");
-    //Vamos a buscar la informacion
-    itemCollection
-      .get()
+    const getProducts = async () => {
+      const { docs } = await getFirestore().collection("productos").get();
+      const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
 
-      .then((querySnapshot) => {
-        if (querySnapshot.size === 0) {
-          console.log("No Hay resultados");
-        }
-        console.log(querySnapshot.docs);
-        setProductos(
-          querySnapshot.docs.map((doc) => {
-            return { id: doc.id, ...doc.data() };
-          })
+      if (productCategoria) {
+        const filterCategoria = newArray.filter(
+          (item) => item.categoria === productCategoria
         );
-      })
-      .catch((error) => {
-        console.log("Error al traer los productos", error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
-  console.log(productos);
-
-  // function ItemListContainer() {
-  //   const [productos, setProductos] = useState([]);
-  //   const { id: idCategory } = useParams();
-
-  //   const getItems = () => {
-  //     return new Promise((resolve, reject) => {
-  //       setTimeout(() => {
-  //         if (idCategory) {
-  //           const filtroCategory = misProductos.filter(
-  //             (item) => item.categoria === idCategory
-  //           );
-  //           resolve(filtroCategory);
-  //         } else {
-  //           resolve(misProductos);
-  //         }
-
-  //         reject("error al traer productos");
-  //       }, 2000);
-  //     });
-  //   };
-
-  //   useEffect(() => {
-  //     setProductos([]);
-  //     getItems()
-  //       .then((res) => setProductos(res))
-  //       .catch((acaHayError) => console.log(acaHayError));
-  //   }, [idCategory]);
+        setProduct(filterCategoria);
+      } else {
+        setProduct(newArray);
+      }
+    };
+    getProducts();
+  }, [productCategoria]);
 
   return (
     <>
       <h2 className="text-center my-5">Nuestro Menu</h2>
-      <ItemList productos={productos} />;
+      <ItemList productos={product} />;
     </>
   );
-};
+}
 
 export default ItemListContainer;

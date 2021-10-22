@@ -17,7 +17,7 @@ export default function App() {
             <Carousel />
             <ItemListContainer />
           </Route>
-          <Route path="/category/:id">
+          <Route path="/category/:categoria">
             <ItemListContainer />
           </Route>
           <Route exact path="/item/:id">

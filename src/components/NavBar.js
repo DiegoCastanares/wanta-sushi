@@ -45,7 +45,7 @@ function NavBar() {
             </li>
             <li className="nav-item mt-1 mx-4">
               <Link
-                to="/category/roll%20semanal"
+                to="/category/roll_semanal"
                 className="text-decoration-none  text-warning fw-bold"
               >
                 Roll Semanal

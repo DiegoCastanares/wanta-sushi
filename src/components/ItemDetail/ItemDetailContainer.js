@@ -5,18 +5,18 @@ import { getFirestore } from "../../firebase";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
-  const { title: itemTitle } = useParams();
+  const { id: itemId } = useParams();
 
   useEffect(() => {
     const getDetail = async () => {
       const { docs } = await getFirestore().collection("productos").get();
       const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
-      const findProduct = newArray.find((item) => item.title === itemTitle);
+      const findProduct = newArray.find((item) => item.id === itemId);
       setProduct(findProduct);
     };
 
     getDetail();
-  }, [itemTitle]);
+  }, [itemId]);
   return <ItemDetail producto={product} />;
 };
 

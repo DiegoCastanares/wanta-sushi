@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContextUse } from "../../context/CartContext";
+import { User } from "../User";
 
 const Cart = () => {
+  const [cargaUser, setCargaUser] = useState(false);
   const { clear, cart, removeItem, totalArticle, totalPrice } =
     CartContextUse();
   console.log(cart);
   console.log(cart.length);
 
+  const handleCargaUser = () => {
+    setCargaUser(true);
+  };
+
   return cart.length === 0 ? (
-    <div className="container">
+    <div className="fluid-container">
       <div className="row">
         <h1 className="col text-center">Tu carro de compras esta vacío</h1>
       </div>
@@ -90,7 +96,13 @@ const Cart = () => {
           <tr>
             <th scope="col" className="col-2 align-middle text-center"></th>
             <th scope="col" className="col-2 align-middle text-center"></th>
-            <th scope="col" className="col-2 align-middle text-center"></th>
+            <th scope="col" className="col-2 align-middle text-center">
+              {" "}
+              <button onClick={handleCargaUser} className="btn btn-success">
+                {" "}
+                Confirmar Pedido{" "}
+              </button>
+            </th>
             <th scope="col" className="col-2 align-middle text-center"></th>
             <th scope="col" className="col-2 align-middle text-center">
               Total Compra
@@ -101,6 +113,8 @@ const Cart = () => {
           </tr>
         </thead>
       </table>
+
+      {cargaUser && <User />}
     </>
   );
 };

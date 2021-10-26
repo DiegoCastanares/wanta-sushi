@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { getFirestore } from "../firebase";
 
 const CartContext = createContext();
 
@@ -47,6 +48,40 @@ export const CartContextProvider = ({ children }) => {
     0
   );
 
+  const createNewOrder = (values) => {
+    //Conectarme a firebase y a la base de datos
+    const db = getFirestore();
+    //Cual es la coleccion sobre la cual voy a trabajar
+    //.doc() estoy haciendo referencia que voy a manipular documentos
+    const documentCollection = db.collection("order").doc();
+
+    const newOrder = {
+      user: {
+        name: values.name,
+        phone: values.phone,
+        email: values.email,
+      },
+      idOrder: documentCollection.id,
+      cart: cart,
+      totalPrice: totalPrice,
+      date: new Date(),
+    };
+
+    //Llamo a batch, manipular documentos en lote o en bloque
+    const batch = db.batch();
+
+    batch.set(documentCollection, newOrder);
+
+    batch
+      .commit()
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
   console.log("carrito", cart);
   return (
     <CartContext.Provider
@@ -58,6 +93,7 @@ export const CartContextProvider = ({ children }) => {
         totalArticle,
         totalPrice,
         cartProducts,
+        createNewOrder,
       }}
     >
       {children}

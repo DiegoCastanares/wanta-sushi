@@ -113,7 +113,6 @@ const Cart = () => {
           </tr>
         </thead>
       </table>
-
       {cargaUser && <User />}
     </>
   );

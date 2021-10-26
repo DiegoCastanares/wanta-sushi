@@ -48,6 +48,7 @@ export const CartContextProvider = ({ children }) => {
     0
   );
 
+  //tengo que sacar esta funcion de aca y crear un componente que se encargue de hacer esto
   const createNewOrder = (values) => {
     //Conectarme a firebase y a la base de datos
     const db = getFirestore();
@@ -67,6 +68,10 @@ export const CartContextProvider = ({ children }) => {
       date: new Date(),
     };
 
+    const idOrder = newOrder.idOrder;
+
+    console.log(idOrder);
+
     //Llamo a batch, manipular documentos en lote o en bloque
     const batch = db.batch();
 
@@ -81,8 +86,8 @@ export const CartContextProvider = ({ children }) => {
         console.error(err);
       });
   };
-
   console.log("carrito", cart);
+
   return (
     <CartContext.Provider
       value={{

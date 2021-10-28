@@ -6,6 +6,8 @@ import Cart from "./components/Cart/Cart";
 import User from "./components/User";
 import { CartContextProvider } from "./context/CartContext";
 import Carousel from "./components/Carousel";
+import Map from "./components/Map";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -16,6 +18,12 @@ export default function App() {
           <Route exact path="/">
             <Carousel />
             <ItemListContainer />
+            <Map
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLTIeCon890PDQwP0d5g0b6Rz4vwJ9QbM&v=3.exp&libraries=geometry,drawing,places"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `400px` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+            />
           </Route>
           <Route path="/category/:categoria">
             <ItemListContainer />
@@ -30,6 +38,7 @@ export default function App() {
             <User />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </CartContextProvider>
   );

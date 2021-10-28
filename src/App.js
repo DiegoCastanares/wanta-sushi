@@ -19,7 +19,7 @@ export default function App() {
             <Carousel />
             <ItemListContainer />
             <Map
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLTIeCon890PDQwP0d5g0b6Rz4vwJ9QbM&v=3.exp&libraries=geometry,drawing,places"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=&v=3.exp&libraries=geometry,drawing,places"
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={<div style={{ height: `400px` }} />}
               mapElement={<div style={{ height: `100%` }} />}

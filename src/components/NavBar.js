@@ -4,7 +4,7 @@ import LogoWanta from "./LogoWanta.png";
 import CartWidget from "./Cart/CartWidget";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -67,6 +67,6 @@ function NavBar() {
       </div>
     </nav>
   );
-}
+};
 
 export default NavBar;

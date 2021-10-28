@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { CartContextUse } from "../../context/CartContext";
-import { User } from "../User";
 
 const Cart = () => {
-  const [cargaUser, setCargaUser] = useState(false);
   const { clear, cart, removeItem, totalArticle, totalPrice } =
     CartContextUse();
   console.log(cart);
   console.log(cart.length);
-
-  const handleCargaUser = () => {
-    setCargaUser(true);
-  };
 
   return cart.length === 0 ? (
     <div className="fluid-container">
@@ -97,11 +91,9 @@ const Cart = () => {
             <th scope="col" className="col-2 align-middle text-center"></th>
             <th scope="col" className="col-2 align-middle text-center"></th>
             <th scope="col" className="col-2 align-middle text-center">
-              {" "}
-              <button onClick={handleCargaUser} className="btn btn-success">
-                {" "}
-                Confirmar Pedido{" "}
-              </button>
+              <Link to="/Confirmation" className="btn btn-success">
+                Confirmar Pedido
+              </Link>
             </th>
             <th scope="col" className="col-2 align-middle text-center"></th>
             <th scope="col" className="col-2 align-middle text-center">
@@ -113,7 +105,6 @@ const Cart = () => {
           </tr>
         </thead>
       </table>
-      {cargaUser && <User />}
     </>
   );
 };

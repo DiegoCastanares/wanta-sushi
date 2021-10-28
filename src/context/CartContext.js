@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import { getFirestore } from "../firebase";
 
 const CartContext = createContext();
 
@@ -48,44 +47,6 @@ export const CartContextProvider = ({ children }) => {
     0
   );
 
-  //tengo que sacar esta funcion de aca y crear un componente que se encargue de hacer esto
-  const createNewOrder = (values) => {
-    //Conectarme a firebase y a la base de datos
-    const db = getFirestore();
-    //Cual es la coleccion sobre la cual voy a trabajar
-    //.doc() estoy haciendo referencia que voy a manipular documentos
-    const documentCollection = db.collection("order").doc();
-
-    const newOrder = {
-      user: {
-        name: values.name,
-        phone: values.phone,
-        email: values.email,
-      },
-      idOrder: documentCollection.id,
-      cart: cart,
-      totalPrice: totalPrice,
-      date: new Date(),
-    };
-
-    const idOrder = newOrder.idOrder;
-
-    console.log(idOrder);
-
-    //Llamo a batch, manipular documentos en lote o en bloque
-    const batch = db.batch();
-
-    batch.set(documentCollection, newOrder);
-
-    batch
-      .commit()
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
   console.log("carrito", cart);
 
   return (
@@ -98,7 +59,6 @@ export const CartContextProvider = ({ children }) => {
         totalArticle,
         totalPrice,
         cartProducts,
-        createNewOrder,
       }}
     >
       {children}

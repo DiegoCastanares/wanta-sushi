@@ -36,7 +36,7 @@ const NavBar = () => {
             </li>
             <li className="nav-item mt-1 mx-4">
               <Link
-                to="/category/rolls_clasicos"
+                to="/category/Clasicos"
                 className="text-decoration-none  text-warning fw-bold"
               >
                 Rolls Clásicos
@@ -44,7 +44,7 @@ const NavBar = () => {
             </li>
             <li className="nav-item mt-1 mx-4">
               <Link
-                to="/category/especiales"
+                to="/category/Especiales"
                 className="text-decoration-none  text-warning fw-bold"
               >
                 Rolls Especiales
@@ -52,7 +52,7 @@ const NavBar = () => {
             </li>
             <li className="nav-item mt-1 mx-4">
               <Link
-                to="/category/tempurizados"
+                to="/category/Tempurizados"
                 className="text-decoration-none  text-warning fw-bold"
               >
                 Tempurizados

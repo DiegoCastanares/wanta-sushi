@@ -26,7 +26,11 @@ function ItemListContainer() {
 
   return (
     <>
-      <h2 className="text-center my-5">Nuestro Menu</h2>
+      {!productCategoria ? (
+        <h1 className="text-center mt-5">Nuestro Menu</h1>
+      ) : (
+        <h1 className="text-center mt-5">{productCategoria}</h1>
+      )}
       <ItemList productos={product} />;
     </>
   );

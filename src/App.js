@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ItemListContainer from "./components/ItemList/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Main/NavBar";
 import Cart from "./components/Cart/Cart";
-import User from "./components/User";
+import Buyer from "./components/Cart/Buyer";
 import { CartContextProvider } from "./context/CartContext";
-import Carousel from "./components/Carousel";
-import Map from "./components/Map";
-import Footer from "./components/Footer";
+import Carousel from "./components/Main/Carousel";
+import Map from "./components/Main/Map";
+import Footer from "./components/Main/Footer";
 
 export default function App() {
   return (
@@ -19,14 +19,21 @@ export default function App() {
             <Carousel />
             <ItemListContainer />
             <Map
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=&v=3.exp&libraries=geometry,drawing,places"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLTIeCon890PDQwP0d5g0b6Rz4vwJ9QbM&v=3.exp&libraries=geometry,drawing,places"
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={<div style={{ height: `400px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
           </Route>
           <Route path="/category/:categoria">
+            <Carousel />
             <ItemListContainer />
+            <Map
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLTIeCon890PDQwP0d5g0b6Rz4vwJ9QbM&v=3.exp&libraries=geometry,drawing,places"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `400px` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+            />
           </Route>
           <Route exact path="/item/:id">
             <ItemDetailContainer />
@@ -35,7 +42,7 @@ export default function App() {
             <Cart />
           </Route>
           <Route exact path="/Confirmation">
-            <User />
+            <Buyer />
           </Route>
         </Switch>
         <Footer />

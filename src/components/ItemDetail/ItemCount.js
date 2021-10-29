@@ -17,27 +17,31 @@ const ItemCount = ({ stock, initial, onAdd, addOn }) => {
 
   return state ? (
     <div className="row mx-0">
-      <button className="btn btn-outline-primary col-2" onClick={sumar}>
+      <button className="btn btn-outline-secondary col-2" onClick={sumar}>
         +
       </button>
       <span className="col-8 fs-4 d-flex justify-content-center">
         {contador}
       </span>
 
-      <button className="btn btn-primary col-2" onClick={restar}>
+      <button className="btn btn-outline-secondary col-2" onClick={restar}>
         -
       </button>
-      <button className="btn btn-primary col-12 mt-3" onClick={() => addOn()}>
+      <button
+        className="btn  col-12 mt-3"
+        style={{ backgroundColor: "#DDFEE1", borderColor: "#DDFEE1" }}
+        onClick={() => addOn()}
+      >
         Agregar al Carrito
       </button>
     </div>
   ) : (
     <Link to="../Cart">
       <button
-        className="btn btn-warning col-12 mt-3"
+        className="btn col-12 mt-3"
         style={{ backgroundColor: "#DDFEE1", borderColor: "#DDFEE1" }}
       >
-        Terminar Compra
+        Ver Carrito
       </button>
     </Link>
   );

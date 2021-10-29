@@ -1,14 +1,13 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { getFirestore } from "../firebase";
-import { CartContextUse } from "../context/CartContext";
+import { getFirestore } from "../../firebase";
+import { CartContextUse } from "../../context/CartContext";
 import swal from "sweetalert";
 import { Redirect } from "react-router";
 
-const User = () => {
+const Buyer = () => {
   const { cart, totalPrice, clear } = CartContextUse();
 
-  //tengo que sacar esta funcion de aca y crear un componente que se encargue de hacer esto
   const createNewOrder = (values) => {
     //Conectarme a firebase y a la base de datos
     const db = getFirestore();
@@ -90,15 +89,18 @@ const User = () => {
           }}
         >
           {({ errors }) => (
-            <Form className="col-md-6 offset-md-3 mt-4">
+            <Form
+              className="col-md-6 offset-md-3 mt-5"
+              style={{ minHeight: "70vh" }}
+            >
               <div className="col">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Nombre</label>
                 <Field
                   type="text"
                   className="form-control"
                   name="name"
                   id="name"
-                  placeholder="Enter name"
+                  placeholder="Ingresa tu nombre"
                 />
                 <ErrorMessage
                   name="name"
@@ -114,7 +116,7 @@ const User = () => {
                   className="form-control"
                   name="email"
                   id="email"
-                  placeholder="Enter email"
+                  placeholder="Ingresa un email"
                 />
                 <ErrorMessage
                   name="email"
@@ -124,13 +126,13 @@ const User = () => {
                 />
               </div>
               <div className="col ">
-                <label htmlFor="phone">Phone Number</label>
+                <label htmlFor="phone">Numero de telefono</label>
                 <Field
                   type="text"
                   className="form-control"
                   name="phone"
                   id="phone"
-                  placeholder="Enter phone number"
+                  placeholder="Ingresa un numero de telefono"
                 />
                 <ErrorMessage
                   name="phone"
@@ -139,9 +141,15 @@ const User = () => {
                   )}
                 />
               </div>
-              <button type="submit" className="btn btn-primary col-2 mt-3">
-                Enviar Pedido
-              </button>
+              <div className="d-flex justify-content-center">
+                <button
+                  type="submit"
+                  className="btn col-6 mt-4"
+                  style={{ backgroundColor: "#DDFEE1", borderColor: "#DDFEE1" }}
+                >
+                  Enviar Pedido
+                </button>
+              </div>
             </Form>
           )}
         </Formik>
@@ -152,4 +160,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default Buyer;

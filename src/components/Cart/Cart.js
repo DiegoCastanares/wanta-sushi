@@ -1,35 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CartContextUse } from "../../context/CartContext";
+import DeleteCart from "../Buttons/DeleteCart";
 
 const Cart = () => {
-  const { clear, cart, removeItem, totalArticle, totalPrice } =
-    CartContextUse();
+  const { cart, totalArticle, totalPrice, removeItem } = CartContextUse();
   console.log(cart);
   console.log(cart.length);
 
   return cart.length === 0 ? (
-    <div className="fluid-container">
-      <div className="row">
+    <div className="container cart" style={{ minHeight: "70vh" }}>
+      <div className="mt-5">
         <h1 className="col text-center">Tu carro de compras esta vacío</h1>
       </div>
-      <div className="row">
-        <Link
-          to="/"
-          className="btn btn-secondary mt-3 col-3 col-md-6 offset-md-3"
-        >
+      <div className="d-flex justify-content-center my-5">
+        <Link to="/" className="btn btn-secondary">
           Ir a comprar
         </Link>
       </div>
     </div>
   ) : (
-    <>
+    <div className="container mt-5" style={{ minHeight: "70vh" }}>
       <table className="table">
         <thead className="col-12">
           <tr>
-            <th scope="col" className="col-2 align-middle text-center">
-              Imagen
-            </th>
+            <th scope="col" className="col-1 align-middle text-center"></th>
             <th scope="col" className="col-2 align-middle text-center">
               Cantidad
             </th>
@@ -42,22 +37,18 @@ const Cart = () => {
             <th scope="col" className="col-2 align-middle text-center">
               Total
             </th>
-            <th scope="col" className="col-2 align-middle text-center">
-              <button onClick={clear} className="btn btn-danger">
-                Eliminar Compra
-              </button>
-            </th>
+            <th className="col-2 align-middle text-center"></th>
           </tr>
         </thead>
       </table>
       {cart.map(({ item, quantity }) => {
         console.log(cart);
         return (
-          <>
+          <div className="container">
             <table className="table">
               <tbody className="col-12 ">
                 <tr>
-                  <th scope="row" className="col-2">
+                  <th scope="row" className="col-1">
                     <img src={item.imagen} alt="" className="col-12" />
                   </th>
                   <td className="col-2 align-middle text-center">{quantity}</td>
@@ -73,7 +64,11 @@ const Cart = () => {
                   <td className="col-2 align-middle text-center">
                     <button
                       onClick={() => removeItem(item.id)}
-                      className="btn btn-warning"
+                      className="btn"
+                      style={{
+                        backgroundColor: "#F1AFD1",
+                        borderColor: "#F1AFD1",
+                      }}
                     >
                       Quitar Item
                     </button>
@@ -81,31 +76,30 @@ const Cart = () => {
                 </tr>
               </tbody>
             </table>
-          </>
+          </div>
         );
       })}
 
       <table className="table">
         <thead className="col-12">
           <tr>
-            <th scope="col" className="col-2 align-middle text-center"></th>
-            <th scope="col" className="col-2 align-middle text-center"></th>
-            <th scope="col" className="col-2 align-middle text-center">
-              <Link to="/Confirmation" className="btn btn-success">
-                Confirmar Pedido
-              </Link>
-            </th>
-            <th scope="col" className="col-2 align-middle text-center"></th>
-            <th scope="col" className="col-2 align-middle text-center">
-              Total Compra
-            </th>
-            <th scope="col" className="col-2 align-middle text-center">
-              <h3>{totalPrice}</h3>
+            <th scope="col" className="col-2 align-middle text-center fs-4">
+              Total a pagar: {totalPrice}
             </th>
           </tr>
         </thead>
       </table>
-    </>
+      <div className="d-flex justify-content-evenly mt-5">
+        <DeleteCart />
+        <Link
+          to="/Confirmation"
+          className="btn"
+          style={{ backgroundColor: "#DDFEE1", borderColor: "#DDFEE1" }}
+        >
+          Confirmar Pedido
+        </Link>
+      </div>
+    </div>
   );
 };
 

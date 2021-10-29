@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 
 function Item({ product }) {
   return (
-    <div className="card" style={{ width: "15rem", margin: ".50rem" }}>
+    <div className="card mx-2 mb-4 border-0" style={{ width: "15rem" }}>
       <img src={product.imagen} className="card-img-top" alt={product.nombre} />
       <div className="card-body">
-        <h5 className="card-title"> {product.nombre} </h5>
-        <p className="card-text"> {product.precio} </p>
+        <h5 className="card-title text-center"> {product.nombre} </h5>
 
         <Link
           to={`/item/${product.id}`}

@@ -1,7 +1,6 @@
 import React from "react";
-
-import LogoWanta from "./LogoWanta.png";
-import CartWidget from "./Cart/CartWidget";
+import LogoWanta from "../images/LogoWanta.png";
+import CartWidget from "../Cart/CartWidget";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -37,18 +36,18 @@ const NavBar = () => {
             </li>
             <li className="nav-item mt-1 mx-4">
               <Link
-                to="/category/mas_vendidos"
+                to="/category/rolls_clasicos"
                 className="text-decoration-none  text-warning fw-bold"
               >
-                Mas Vendidos
+                Rolls Clásicos
               </Link>
             </li>
             <li className="nav-item mt-1 mx-4">
               <Link
-                to="/category/roll_semanal"
+                to="/category/especiales"
                 className="text-decoration-none  text-warning fw-bold"
               >
-                Roll Semanal
+                Rolls Especiales
               </Link>
             </li>
             <li className="nav-item mt-1 mx-4">

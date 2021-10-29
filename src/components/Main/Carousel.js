@@ -1,11 +1,11 @@
 import React from "react";
-import SushiRoll from "./SushiRoll.png";
-import Salad from "./Salad.png";
-import Tempurizado from "./Tempurizado.png";
+import SushiRoll from "../images/SushiRoll.png";
+import Salad from "../images/Salad.png";
+import Tempurizado from "../images/Tempurizado.png";
 
 const Carousel = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <div
         id="carouselExampleCaptions"
         className="carousel slide"
@@ -55,7 +55,7 @@ const Carousel = () => {
           <div className="carousel-item">
             <img src={Tempurizado} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h2>Tempurizado</h2>
+              <h2>Tempurizados</h2>
               <p>
                 Some representative placeholder content for the third slide.
               </p>
@@ -87,7 +87,7 @@ const Carousel = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -78,7 +78,7 @@ const Buyer = () => {
             if (!valores.phone) {
               errores.phone = "El telefono es requerido";
             } else if (!/^[0-9]{10}$/.test(valores.phone)) {
-              errores.phone = "El telefono debe contener 10 digitos";
+              errores.phone = "El teléfono debe contener 10 digitos";
             }
 
             return errores;

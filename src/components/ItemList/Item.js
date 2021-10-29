@@ -12,7 +12,7 @@ function Item({ product }) {
           to={`/item/${product.id}`}
           className="btn btn-secondary mt-3 col-12"
         >
-          detalle
+          Detalle
         </Link>
       </div>
     </div>

@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Wanta-Sushi Proyecto Final Curso de ReactJs CorderHouse
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

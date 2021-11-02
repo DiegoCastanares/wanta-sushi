@@ -8,7 +8,6 @@ const ItemCount = ({ stock, initial, onAdd, addOn }) => {
   const [state, setState] = useState(true);
 
   const sumar = () => (contador < stock ? setContador(contador + 1) : "");
-  console.log(contador);
 
   const restar = () => (contador > initial ? setContador(contador - 1) : "");
 

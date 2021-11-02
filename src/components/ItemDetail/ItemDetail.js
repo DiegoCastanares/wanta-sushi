@@ -9,8 +9,6 @@ const ItemDetail = ({ producto }) => {
   const { addItem } = CartContextUse();
 
   const onAdd = (qty) => {
-    console.log("Se agregaron ", "productos al carrito");
-
     addItem(producto, qty);
   };
 

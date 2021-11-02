@@ -5,8 +5,6 @@ import DeleteCart from "../Buttons/DeleteCart";
 
 const Cart = () => {
   const { cart, totalArticle, totalPrice, removeItem } = CartContextUse();
-  console.log(cart);
-  console.log(cart.length);
 
   return cart.length === 0 ? (
     <div className="container" style={{ minHeight: "70vh" }}>
@@ -43,7 +41,7 @@ const Cart = () => {
       </table>
       {cart.map(({ item, quantity }) => {
         //item es el producto, quantity es la cantidad
-        console.log(cart);
+
         return (
           <div className="container">
             <table className="table">

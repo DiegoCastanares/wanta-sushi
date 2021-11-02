@@ -7,7 +7,6 @@ La compra se confirma con la carga de datos personales del comprador y envia un 
 
 ![Alt Text](https://res.cloudinary.com/dgcnv5j5c/image/upload/v1635874439/wantaSushi/wanta-ecommerce-demo.gif)
 
-<p class="has-line-data" data-line-start="10" data-line-end="11">&lt;img src=&quot;<a href="https://res.cloudinary.com/dgcnv5j5c/image/upload/v1635874439/wantaSushi/wanta-ecommerce-demo.gif">https://res.cloudinary.com/dgcnv5j5c/image/upload/v1635874439/wantaSushi/wanta-ecommerce-demo.gif</a>&quot; alt=“demo wanta sushi ecommerce”&gt;</p>
 <p class="has-line-data" data-line-start="12" data-line-end="13"><strong>Tecnologias y librerias utilizadas</strong></p>
 <p class="has-line-data" data-line-start="14" data-line-end="23">React<br>
 JavaScript<br>

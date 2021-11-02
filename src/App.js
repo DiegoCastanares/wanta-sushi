@@ -9,6 +9,11 @@ import Carousel from "./components/Main/Carousel";
 import Map from "./components/Main/Map";
 import Footer from "./components/Main/Footer";
 
+//App.js es el componente principal de la aplicación
+//contiene todos los componentes que se van a renderizar
+//contiene el ruter de las páginas
+//envia las props del mapa a la página de mapa
+
 export default function App() {
   return (
     <CartContextProvider>

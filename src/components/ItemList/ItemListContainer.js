@@ -3,6 +3,8 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { getFirestore } from "../../firebase";
 
+//ItemListContainer se encarga de
+
 function ItemListContainer() {
   const [product, setProduct] = useState([]);
   const { categoria: productCategoria } = useParams();

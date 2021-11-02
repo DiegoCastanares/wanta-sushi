@@ -42,6 +42,7 @@ const Cart = () => {
         </thead>
       </table>
       {cart.map(({ item, quantity }) => {
+        //item es el producto, quantity es la cantidad
         console.log(cart);
         return (
           <div className="container">
@@ -67,7 +68,7 @@ const Cart = () => {
                   </td>
                   <td className="col-2 align-middle text-center">
                     <button
-                      onClick={() => removeItem(item.id)}
+                      onClick={() => removeItem(item.id)} //elimina el producto
                       className="btn"
                       style={{
                         backgroundColor: "#F1AFD1",
@@ -96,7 +97,7 @@ const Cart = () => {
       <div className="d-flex justify-content-evenly mt-5">
         <DeleteCart />
         <Link
-          to="/Confirmation"
+          to="/Confirmation" //redirecciona a la pagina de confirmacion
           className="btn"
           style={{ backgroundColor: "#DDFEE1", borderColor: "#DDFEE1" }}
         >

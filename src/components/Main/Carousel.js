@@ -38,27 +38,18 @@ const Carousel = () => {
             <img src={SushiRoll} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h2>Sushi Rolls</h2>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
             </div>
           </div>
           <div className="carousel-item">
             <img src={Salad} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h2>Salads</h2>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
             </div>
           </div>
           <div className="carousel-item">
             <img src={Tempurizado} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h2>Tempurizados</h2>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
             </div>
           </div>
         </div>

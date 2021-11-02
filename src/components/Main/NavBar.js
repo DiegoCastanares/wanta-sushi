@@ -3,6 +3,9 @@ import LogoWanta from "../images/LogoWanta.png";
 import CartWidget from "../Cart/CartWidget";
 import { Link } from "react-router-dom";
 
+//NavBar contiene los links de la barra de navegación
+//NavBar contiene el componente CartWidget
+
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">

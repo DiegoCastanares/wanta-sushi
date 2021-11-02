@@ -1,5 +1,8 @@
 import * as firebase from "firebase/app";
 import "firebase/firestore";
+
+//firebase index contiene la configuracion de firebase
+
 const app = firebase.initializeApp({
   apiKey: "AIzaSyAm9RE-cRO1pmTVJevbXxK1mrpt4JWSsTg",
 

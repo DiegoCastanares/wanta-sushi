@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+//Item se encarga de renderizare un componente de tipo card
+
 function Item({ product }) {
   return (
     <div className="card mx-2 mb-4 border-0" style={{ width: "15rem" }}>

@@ -1,6 +1,8 @@
 import React from "react";
 import Item from "./Item";
 
+//ItemList se encarga de mostrar una lista de cards con los items
+
 const ItemList = ({ productos }) => {
   return (
     <div className="d-flex flex-wrap justify-content-center">

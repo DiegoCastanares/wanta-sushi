@@ -12,10 +12,10 @@ const Buyer = () => {
     //Conectarme a firebase y a la base de datos
     const db = getFirestore();
     //Cual es la coleccion sobre la cual voy a trabajar
-    //.doc() estoy haciendo referencia que voy a manipular documentos
     const documentCollection = db.collection("order").doc();
 
     const newOrder = {
+      //Creo un objeto con los datos que voy a guardar
       user: {
         name: values.name,
         phone: values.phone,
@@ -29,6 +29,7 @@ const Buyer = () => {
 
     const idOrder = newOrder.idOrder;
 
+    //Muestra el mensaje de que se ha creado el pedido
     swal("Pedido enviado bajo el codigo", idOrder, "success");
 
     //Llamo a batch, manipular documentos en lote o en bloque
@@ -58,6 +59,7 @@ const Buyer = () => {
             emailConfirm: "",
           }}
           validate={(valores) => {
+            //Validaciones
             let errores = {};
             if (!valores.name) {
               errores.name = "El nombre es requerido";
@@ -84,7 +86,9 @@ const Buyer = () => {
             createNewOrder(valores);
           }}
         >
-          {({ errors }) => (
+          {(
+            { errors } //errors es un objeto que contiene los errores
+          ) => (
             <div className="d-flex justify-content-center">
               <Form
                 className="col-md-6 col-xl-4 col-8 mt-5"
@@ -174,7 +178,7 @@ const Buyer = () => {
           )}
         </Formik>
       ) : (
-        <Redirect to="/" />
+        <Redirect to="/" /> //Redireccionar a la pagina principal
       )}
     </>
   );

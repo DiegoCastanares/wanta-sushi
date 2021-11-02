@@ -3,6 +3,8 @@ import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import { CartContextUse } from "../../context/CartContext";
 
+//ItemDetail muestra el detalle de cada producto a partir de su id y pasa el producto al componente ItemCount
+
 const ItemDetail = ({ producto }) => {
   const { addItem } = CartContextUse();
 
@@ -33,7 +35,6 @@ const ItemDetail = ({ producto }) => {
           <h5 className="card-text text-center mb-3">
             Tu roll x 10 piezas $ {producto.precio}{" "}
           </h5>
-
           <ItemCount onAdd={onAdd} stock={producto.stock} initial={1} />
           <Link to="/">
             <button className="btn btn-secondary col-12 px-4 mt-3">

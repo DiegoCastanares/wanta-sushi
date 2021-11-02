@@ -14,7 +14,7 @@ const ItemDetail = ({ producto }) => {
 
   return (
     <div className=" d-flex justify-content-center">
-      <div className="card col-2 border-0">
+      <div className="card col col-sm-10 col-md-4 col-xl-3 border-0">
         <img
           src={producto.imagen}
           className="card-img-top"

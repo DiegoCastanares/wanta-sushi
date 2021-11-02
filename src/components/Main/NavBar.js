@@ -55,8 +55,8 @@ const NavBar = () => {
                 Tempurizados
               </Link>
             </li>
-            <li className="nav-item mt-1 mx-4">
-              <CartWidget itemsCart="4" />
+            <li className="nav-item mt-lg-1 mt-4 mx-4">
+              <CartWidget />
             </li>
           </ul>
         </div>

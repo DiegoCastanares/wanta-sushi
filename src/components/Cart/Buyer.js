@@ -85,90 +85,92 @@ const Buyer = () => {
           }}
         >
           {({ errors }) => (
-            <Form
-              className="col-md-6 offset-md-3 mt-5"
-              style={{ minHeight: "70vh" }}
-            >
-              <div className="col">
-                <label htmlFor="name">Nombre</label>
-                <Field
-                  type="text"
-                  className="form-control"
-                  name="name"
-                  id="name"
-                  placeholder="Ingresa tu nombre"
-                />
-                <ErrorMessage
-                  name="name"
-                  component={() => (
-                    <div className="text-danger">{errors.name}</div>
-                  )}
-                />
-              </div>
+            <div className="d-flex justify-content-center">
+              <Form
+                className="col-md-6 col-xl-4 col-8 mt-5"
+                style={{ minHeight: "70vh" }}
+              >
+                <div className="col my-2">
+                  <label htmlFor="name">Nombre</label>
+                  <Field
+                    type="text"
+                    className="form-control"
+                    name="name"
+                    id="name"
+                    placeholder="Ingresa tu nombre"
+                  />
+                  <ErrorMessage
+                    name="name"
+                    component={() => (
+                      <div className="text-danger">{errors.name}</div>
+                    )}
+                  />
+                </div>
 
-              <div className="col ">
-                <label htmlFor="phone">Numero de telefono</label>
-                <Field
-                  type="text"
-                  className="form-control"
-                  name="phone"
-                  id="phone"
-                  placeholder="Ingresa un numero de telefono"
-                />
-                <ErrorMessage
-                  name="phone"
-                  component={() => (
-                    <div className="text-danger">{errors.phone}</div>
-                  )}
-                />
-              </div>
-              <div className="col">
-                <label htmlFor="email">Email</label>
-                <Field
-                  type="email"
-                  className="form-control"
-                  name="email"
-                  id="email"
-                  placeholder="Ingresa un email"
-                />
-                <ErrorMessage
-                  name="email"
-                  component={() => (
-                    <div className="text-danger">{errors.email}</div>
-                  )}
-                />
-              </div>
+                <div className="col my-2 ">
+                  <label htmlFor="phone">Numero de telefono</label>
+                  <Field
+                    type="text"
+                    className="form-control"
+                    name="phone"
+                    id="phone"
+                    placeholder="Ingresa tu numero de telefono"
+                  />
+                  <ErrorMessage
+                    name="phone"
+                    component={() => (
+                      <div className="text-danger">{errors.phone}</div>
+                    )}
+                  />
+                </div>
+                <div className="col my-2">
+                  <label htmlFor="email">Email</label>
+                  <Field
+                    type="email"
+                    className="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Ingresa tu email"
+                  />
+                  <ErrorMessage
+                    name="email"
+                    component={() => (
+                      <div className="text-danger">{errors.email}</div>
+                    )}
+                  />
+                </div>
 
-              <div className="col">
-                <label htmlFor="emailConfirm">Confirmar email</label>
-                <Field
-                  type="email"
-                  className="form-control"
-                  name="emailConfirm"
-                  id="emailConfirm"
-                  placeholder="Ingrese su email nuevamente"
-                />
-                <ErrorMessage
-                  name="emailConfirm"
-                  component={() => (
-                    <div className="text-danger">{errors.emailConfirm}</div>
-                  )}
-                />
-              </div>
+                <div className="col my-2">
+                  <label htmlFor="emailConfirm">Confirmar email</label>
+                  <Field
+                    type="email"
+                    className="form-control"
+                    name="emailConfirm"
+                    id="emailConfirm"
+                    placeholder="Ingresa tu email nuevamente"
+                  />
+                  <ErrorMessage
+                    name="emailConfirm"
+                    component={() => (
+                      <div className="text-danger">{errors.emailConfirm}</div>
+                    )}
+                  />
+                </div>
 
-              <div className="d-flex justify-content-center">
-                <button
-                  type="submit"
-                  className="btn col-6 mt-4"
-                  style={{
-                    backgroundColor: "#DDFEE1",
-                    borderColor: "#DDFEE1",
-                  }}
-                >
-                  Enviar Pedido
-                </button>
-              </div>
-            </Form>
+                <div className="d-flex justify-content-center">
+                  <button
+                    type="submit"
+                    className="btn col-6 mt-4"
+                    style={{
+                      backgroundColor: "#DDFEE1",
+                      borderColor: "#DDFEE1",
+                    }}
+                  >
+                    Enviar Pedido
+                  </button>
+                </div>
+              </Form>
+            </div>
           )}
         </Formik>
       ) : (

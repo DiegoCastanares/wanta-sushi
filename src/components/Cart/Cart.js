@@ -9,7 +9,7 @@ const Cart = () => {
   console.log(cart.length);
 
   return cart.length === 0 ? (
-    <div className="container cart" style={{ minHeight: "70vh" }}>
+    <div className="container" style={{ minHeight: "70vh" }}>
       <div className="mt-5">
         <h1 className="col text-center">Tu carro de compras esta vacío</h1>
       </div>
@@ -48,8 +48,12 @@ const Cart = () => {
             <table className="table">
               <tbody className="col-12 ">
                 <tr>
-                  <th scope="row" className="col-1">
-                    <img src={item.imagen} alt="" className="col-12" />
+                  <th scope="row" className="col-2 align-middle p-0">
+                    <img
+                      src={item.imagen}
+                      alt={item.nombre}
+                      className="col-12"
+                    />
                   </th>
                   <td className="col-2 align-middle text-center">{quantity}</td>
                   <td className="col-2 align-middle text-center">
@@ -70,7 +74,7 @@ const Cart = () => {
                         borderColor: "#F1AFD1",
                       }}
                     >
-                      Quitar Item
+                      X
                     </button>
                   </td>
                 </tr>
@@ -96,7 +100,7 @@ const Cart = () => {
           className="btn"
           style={{ backgroundColor: "#DDFEE1", borderColor: "#DDFEE1" }}
         >
-          Confirmar Pedido
+          Realizar Compra
         </Link>
       </div>
     </div>

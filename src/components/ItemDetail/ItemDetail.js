@@ -13,8 +13,8 @@ const ItemDetail = ({ producto }) => {
   };
 
   return (
-    <div className=" d-flex justify-content-center mt-3">
-      <div className="card col-3 border-0">
+    <div className=" d-flex justify-content-center">
+      <div className="card col-2 border-0">
         <img
           src={producto.imagen}
           className="card-img-top"
@@ -23,8 +23,17 @@ const ItemDetail = ({ producto }) => {
 
         <div className="card-body col">
           <h4 className="card-title text-center"> {producto.nombre} </h4>
-          <h5 className="card-text text-center"> {producto.precio} </h5>
-          <p className="card-text text-center mb-4">{producto.descripcion}</p>
+          <h5 className="card-title text-center text-secondary">
+            {" "}
+            -- Rolls {producto.categoria} --{" "}
+          </h5>
+          <p className="card-text text-center mb-3 fst-italic">
+            {producto.descripcion}
+          </p>
+          <h5 className="card-text text-center mb-3">
+            Tu roll x 10 piezas $ {producto.precio}{" "}
+          </h5>
+
           <ItemCount onAdd={onAdd} stock={producto.stock} initial={1} />
           <Link to="/">
             <button className="btn btn-secondary col-12 px-4 mt-3">

@@ -29,7 +29,7 @@ function ItemListContainer() {
       {!productCategoria ? (
         <h1 className="text-center mt-5">Nuestro Menu</h1>
       ) : (
-        <h1 className="text-center mt-5">{productCategoria}</h1>
+        <h1 className="text-center mt-5">Nuestros {productCategoria}</h1>
       )}
       <ItemList productos={product} />;
     </>

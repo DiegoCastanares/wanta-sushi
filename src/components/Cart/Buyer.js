@@ -53,8 +53,9 @@ const Buyer = () => {
         <Formik
           initialValues={{
             name: "",
-            email: "",
             phone: "",
+            email: "",
+            emailConfirm: "",
           }}
           validate={(valores) => {
             let errores = {};
@@ -64,21 +65,16 @@ const Buyer = () => {
               errores.name = "El nombre debe contener solo letras";
             }
 
-            if (!valores.email) {
-              errores.email = "El email es requerido";
-            } else if (
-              !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
-                valores.email
-              )
-            ) {
-              errores.email =
-                "El email puede contener solo letras, numeros, puntos, guiones y guion bajo";
-            }
-
             if (!valores.phone) {
               errores.phone = "El telefono es requerido";
             } else if (!/^[0-9]{10}$/.test(valores.phone)) {
               errores.phone = "El teléfono debe contener 10 digitos";
+            }
+
+            if (!valores.emailConfirm) {
+              errores.emailConfirm = "El email es requerido";
+            } else if (valores.email !== valores.emailConfirm) {
+              errores.emailConfirm = "El email no coincide";
             }
 
             return errores;
@@ -109,22 +105,7 @@ const Buyer = () => {
                   )}
                 />
               </div>
-              <div className="col">
-                <label htmlFor="email">Email</label>
-                <Field
-                  type="email"
-                  className="form-control"
-                  name="email"
-                  id="email"
-                  placeholder="Ingresa un email"
-                />
-                <ErrorMessage
-                  name="email"
-                  component={() => (
-                    <div className="text-danger">{errors.email}</div>
-                  )}
-                />
-              </div>
+
               <div className="col ">
                 <label htmlFor="phone">Numero de telefono</label>
                 <Field
@@ -141,11 +122,48 @@ const Buyer = () => {
                   )}
                 />
               </div>
+              <div className="col">
+                <label htmlFor="email">Email</label>
+                <Field
+                  type="email"
+                  className="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="Ingresa un email"
+                />
+                <ErrorMessage
+                  name="email"
+                  component={() => (
+                    <div className="text-danger">{errors.email}</div>
+                  )}
+                />
+              </div>
+
+              <div className="col">
+                <label htmlFor="emailConfirm">Confirmar email</label>
+                <Field
+                  type="email"
+                  className="form-control"
+                  name="emailConfirm"
+                  id="emailConfirm"
+                  placeholder="Ingrese su email nuevamente"
+                />
+                <ErrorMessage
+                  name="emailConfirm"
+                  component={() => (
+                    <div className="text-danger">{errors.emailConfirm}</div>
+                  )}
+                />
+              </div>
+
               <div className="d-flex justify-content-center">
                 <button
                   type="submit"
                   className="btn col-6 mt-4"
-                  style={{ backgroundColor: "#DDFEE1", borderColor: "#DDFEE1" }}
+                  style={{
+                    backgroundColor: "#DDFEE1",
+                    borderColor: "#DDFEE1",
+                  }}
                 >
                   Enviar Pedido
                 </button>

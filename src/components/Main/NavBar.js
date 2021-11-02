@@ -27,17 +27,14 @@ const NavBar = () => {
         >
           <ul className="navbar-nav">
             <li className="nav-item mt-1 mx-4">
-              <Link
-                to="/"
-                className="text-decoration-none text-warning fw-bold"
-              >
+              <Link to="/" className="text-decoration-none text-dark fw-bold">
                 Home
               </Link>
             </li>
             <li className="nav-item mt-1 mx-4">
               <Link
                 to="/category/Clasicos"
-                className="text-decoration-none  text-warning fw-bold"
+                className="text-decoration-none  text-dark fw-bold"
               >
                 Rolls Clásicos
               </Link>
@@ -45,7 +42,7 @@ const NavBar = () => {
             <li className="nav-item mt-1 mx-4">
               <Link
                 to="/category/Especiales"
-                className="text-decoration-none  text-warning fw-bold"
+                className="text-decoration-none  text-dark fw-bold"
               >
                 Rolls Especiales
               </Link>
@@ -53,7 +50,7 @@ const NavBar = () => {
             <li className="nav-item mt-1 mx-4">
               <Link
                 to="/category/Tempurizados"
-                className="text-decoration-none  text-warning fw-bold"
+                className="text-decoration-none  text-dark fw-bold"
               >
                 Tempurizados
               </Link>

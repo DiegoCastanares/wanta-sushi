@@ -35,7 +35,7 @@ const Cart = () => {
             <th scope="col" className="col-2 align-middle text-center">
               Total
             </th>
-            <th className="col-2 align-middle text-center"></th>
+            <th className="col align-middle text-center"></th>
           </tr>
         </thead>
       </table>
